@@ -1,0 +1,22 @@
+@import '../sass/colors';
+
+.app-navbar{
+    &-default{
+        &__container{
+            margin: unset;
+            min-width: 100%;
+            padding-bottom: 10%;
+            &-brand{
+                display: flex;
+                color: $defaultAppTextColor !important;
+                font-weight: bold;
+                line-height: 23px;
+                &-logo{
+                    height: 50px;
+                    width: 50px;
+                    margin-right: 5px;
+                }
+            }    
+        }
+    }
+}

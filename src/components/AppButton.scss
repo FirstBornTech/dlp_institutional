@@ -1,0 +1,8 @@
+@import '../sass/colors';
+
+.app-btn{
+    &-default{
+        background-color: $defaultButtonColor;
+        color: $defaultButtonLabelColor;
+    }
+}

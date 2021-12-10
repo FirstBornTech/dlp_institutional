@@ -1,0 +1,9 @@
+@import '../sass/colors';
+
+.app-body{
+    &-default{
+        background-color: $defaultAppBodyBackgroundColor;
+        height: 100vh;
+        width: 100%;
+    }
+}
