@@ -1,0 +1,11 @@
+@import '../sass/colors';
+
+.sign-in{
+    &-default{
+        display: flex;
+        background-color: $defaultSignInBackgroundColor;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+}
