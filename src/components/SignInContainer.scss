@@ -19,7 +19,7 @@
                 height: 100%;
                 border-radius: 10px 0 0 10px;  
                 overflow: hidden;
-                animation: signInFormAnimation 1s;
+                animation: signInFormAnimation 1.5s;
             }
             &-design{
                 display: flex;
@@ -30,7 +30,7 @@
                 height: 100%;
                 border-radius: 0 10px 10px 0;
                 text-align: center;
-                animation: signInDesignAnimation 1s;
+                animation: signInDesignAnimation 1.5s;
                 overflow: hidden;
                 &-header{
                     font-size: 21px;
@@ -65,7 +65,7 @@
                 height: 100%;
                 border-radius: 10px 0 0 10px;
                 text-align: center;
-                animation: signUpDesignAnimation 1s;
+                animation: signUpDesignAnimation 1.5s;
                 overflow: hidden;
                 &-header{
                     font-size: 21px;
@@ -98,7 +98,7 @@
                 height: 100%;
                 border-radius: 0 10px 10px 0;
                 overflow: hidden;
-                animation: signUpFormAnimation 1s;
+                animation: signUpFormAnimation 1.5s;
             }
         }
     }
