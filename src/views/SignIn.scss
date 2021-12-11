@@ -7,5 +7,22 @@
         width: 100%;
         height: 100vh;
         overflow: hidden;
+        text-align: center;
+        &-form{
+            margin: auto;
+        }
+        &-header{
+            color: $defaultAppBackgroundColor;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        &-input{
+            border-radius: 50px;
+            min-width: 250px;
+            border: 1px solid $defaultInputBorderColor;
+            background-color: $defaultInputBackgroundColor;
+            height: 35px;
+            font-size: 14px;
+        }
     }
 }

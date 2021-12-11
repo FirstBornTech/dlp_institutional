@@ -17,13 +17,9 @@
                 background-color: $defaultAppSecondaryBackgroundColor;
                 width: 50%;
                 height: 100%;
-                border-radius: 10px 0 0 10px;
-                animation-name: signInFormAnimation;
-                animation-duration: 1s;
-                @keyframes signInFormAnimation {
-                    from {width: 0%;}
-                    to {width: 50%;}
-                  }
+                border-radius: 10px 0 0 10px;  
+                overflow: hidden;
+                animation: signInFormAnimation 1s;
             }
             &-design{
                 display: flex;
@@ -34,45 +30,28 @@
                 height: 100%;
                 border-radius: 0 10px 10px 0;
                 text-align: center;
-                animation-name: signInAnimation;
-                animation-duration: 1s;
-
-                @keyframes signInAnimation {
-                    from {width: 100%;}
-                    to {width: 50%;}
-                  }
+                animation: signInDesignAnimation 1s;
+                overflow: hidden;
                 &-header{
                     font-size: 21px;
                     font-weight: 600;
                     margin-bottom: 20px;
-                    animation-name: signInContentAnimation;
-                    animation-duration: 1s;
+                    animation: signInContentAnimation 0.5s;
                 }
                 &-description{
                     margin: 0 auto 20px auto;
                     font-size: 14px;
                     line-height: 18px;
-                    min-width: 250px;
-                    max-width: 300px;
-                    animation-name: signInContentAnimation;
-                    animation-duration: 1s;
+                    animation: signInContentAnimation 0.5s;
                 }
                 &-button{
                     margin: 0 auto 20px auto;
-                    animation-name: signInContentAnimation;
-                    animation-duration: 1s;
+                    animation: signInContentAnimation 0.5s;
                 }
                 &-img{
                     margin: auto;
                     width: 250px;
-                    animation-name: signInContentAnimation;
-                    animation-duration: 1s;
-                }
-
-                @keyframes signInContentAnimation {
-                    from {transform: translate(50%,0)}
-                    to {transform: translate(0,0)}
-                    
+                    animation: signInContentAnimation 0.5s;
                 }
             }
         }
@@ -86,43 +65,28 @@
                 height: 100%;
                 border-radius: 10px 0 0 10px;
                 text-align: center;
-                animation-name: signUpAnimation;
-                animation-duration: 1s;
-
-                @keyframes signUpAnimation {
-                    from {width: 100%;}
-                    to {width: 50%;}
-                  }
+                animation: signUpDesignAnimation 1s;
+                overflow: hidden;
                 &-header{
                     font-size: 21px;
                     font-weight: 600;
                     margin-bottom: 20px;
-                    animation-name: signUpContentAnimation;
-                    animation-duration: 1s;
+                    animation: signUpContentAnimation 0.5s;
                 }
                 &-description{
                     margin: 0 auto 20px auto;
                     font-size: 14px;
                     line-height: 18px;
-                    min-width: 250px;
-                    max-width: 300px;
-                    animation-name: signUpContentAnimation;
-                    animation-duration: 1s;
+                    animation: signUpContentAnimation 0.5s;
                 }
                 &-button{
                     margin: 0 auto 20px auto;
-                    animation-name: signUpContentAnimation;
-                    animation-duration: 1s;
+                    animation: signUpContentAnimation 0.5s;
                 }
                 &-img{
                     margin: auto;
                     width: 180px;
-                    animation-name: signUpContentAnimation;
-                    animation-duration: 1s;
-                }
-                @keyframes signUpContentAnimation {
-                    from {transform: translate(-50%,0)}
-                    to {transform: translate(0,0)}
+                    animation: signUpContentAnimation 0.5s;
                 }
             }
             &-form{
@@ -133,13 +97,35 @@
                 width: 50%;
                 height: 100%;
                 border-radius: 0 10px 10px 0;
-                animation-name: signUpFormAnimation;
-                animation-duration: 1s;
-                @keyframes signUpFormAnimation {
-                    from {width: 0%;}
-                    to {width: 50%;}
-                  }
+                overflow: hidden;
+                animation: signUpFormAnimation 1s;
             }
         }
     }
+}
+
+@keyframes signInDesignAnimation{
+    from  {width: 100%}
+    to {width: 50%}
+}
+@keyframes signInFormAnimation{
+    from  {  width: 0%;}
+    to {width: 50%;}
+}
+@keyframes signInContentAnimation{
+    from { transform: translate(50%,0) }
+    to { transform: translate(0%,0) }
+}
+
+@keyframes signUpDesignAnimation{
+    from  {width: 100%}
+    to {width: 50%}
+}
+@keyframes signUpFormAnimation{
+    from  {  width: 0%;}
+    to {width: 50%;}
+}
+@keyframes signUpContentAnimation{
+    from { transform: translate(-50%,0) }
+    to { transform: translate(0%,0) }
 }
