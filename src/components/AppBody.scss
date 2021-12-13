@@ -2,6 +2,7 @@
 
 .app-body{
     &-default{
+        display: flex;
         background-color: $defaultAppBodyBackgroundColor;
         height: 100vh;
         width: 100%;
