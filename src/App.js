@@ -1,7 +1,7 @@
 import Dashboard from './views/Dashboard';
 import SignIn from './views/SignIn';
 
-const isLoggedIn = false;
+const isLoggedIn = true;
 function App() {
   return (
     <>
