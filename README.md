@@ -4,3 +4,4 @@ Framework : React JS <br />
 Major modules:
 - node-sass (styling)
 - react-bootstrap (styling)
+- react-router-dom (routing)
