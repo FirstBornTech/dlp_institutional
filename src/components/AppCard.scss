@@ -1,0 +1,48 @@
+@import '../sass/colors';
+
+.app-card{
+    &-default{
+        background-color: $cardPrimaryBackgroundColor;
+        color: $cardPrimaryTextColor;
+        border-radius: 25px;
+        margin:20px;
+        padding: 20px;
+        box-shadow: -3px 3px 10px 0px $cardBoxShadowColor;
+        &__header{
+            font-size: 21px;
+            text-transform: uppercase;
+            text-align: right;
+            padding-right: 10px;
+            border-right: 5px solid $cardPrimaryTextColor;
+        }
+        &__description{
+            font-size: 18px;
+        }
+    }
+    &-secondary{
+        background-color: $cardSecondaryBackgroundColor;
+        color: $cardSecondaryTextColor;
+        border-radius: 25px;
+        margin:20px;
+        padding: 20px;
+        box-shadow: -3px 3px 10px 0px $cardBoxShadowColor;
+        &__header{
+            font-size: 21px;
+            text-transform: uppercase;
+            text-align: right;
+            padding-right: 10px;
+            border-right: 5px solid $cardSecondaryTextColor;
+        }
+        &__description{
+            font-size: 18px;
+        }
+    }
+}
+.small{
+    width: 240px;
+    height: 160px;
+}
+.medium{
+    width: 280px;
+    height: 280px;
+}
