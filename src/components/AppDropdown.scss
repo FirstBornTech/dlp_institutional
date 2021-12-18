@@ -1,0 +1,16 @@
+@import '../sass/colors';
+
+.dropdown{
+    &-default{
+        margin: auto 0;
+        &-toggle{
+            min-width: 150px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+        }
+        .dropdown-toggle::after {
+            margin: auto 0;
+        }
+    }
+}
