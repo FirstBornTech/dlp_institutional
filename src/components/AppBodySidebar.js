@@ -157,14 +157,13 @@ const AppBodySidebar = ({ type = "default" }) => {
     const renderSidebarDataSubcontent = (key, content) => {
         return content.map((data, index) => {
             return (
-                <>
+                <div key={index}>
                     <div
-                        key={index}
                         className={selectedItemSubcontent === index ? sidebarClassName + '-subcontent-selected' : sidebarClassName + '-subcontent-unselected'}
                         onClick={() => setSelectedItemSubcontent(index)}>
                         {key}.{data.key}.{data.title}
                     </div>
-                </>
+                </div>
             )
         })
     }
@@ -172,9 +171,8 @@ const AppBodySidebar = ({ type = "default" }) => {
     const renderSidebarDataContent = (content) => {
         return content.map((data, index) => {
             return (
-                <>
+                <div key={index}>
                     <div
-                        key={index}
                         className={(selectedItemContent === index && !data?.subcontent) ? sidebarClassName + '-content-selected' : sidebarClassName + '-content-unselected'}
                         onClick={() => { setSelectedItemContent(index); setSelectedItemSubcontent(0) }}>
                         {data.key}.{data.title}
@@ -183,7 +181,7 @@ const AppBodySidebar = ({ type = "default" }) => {
                         <div className={sidebarClassName + '-container-subcontent'}>
                             {renderSidebarDataSubcontent(data.key, data.subcontent)}
                         </div>}
-                </>
+                </div>
             )
         })
     }
@@ -191,13 +189,12 @@ const AppBodySidebar = ({ type = "default" }) => {
     const renderSidebarData = () => {
         return sidebarData.map((data, index) => {
             return (
-                <>
+                <div key={index}>
                     <Link to={data.path} className={sidebarClassName + '-link'}>
                         <div
-                            key={index}
                             className={selectedItem === index ? sidebarClassName + '-selected' : sidebarClassName + '-unselected'}
                             onClick={() => { setSelectedItem(index); setSelectedItemContent(0); setSelectedItemSubcontent(0) }}>
-                            <img className={sidebarClassName + '-icon'} src={selectedItem === index ?data.selectedIcon :data.unselectedIcon} alt={'Home'}/> 
+                            <img className={sidebarClassName + '-icon'} src={selectedItem === index ? data.selectedIcon : data.unselectedIcon} alt={'Home'} />
                             {data.title}
                         </div>
                     </Link>
@@ -205,7 +202,7 @@ const AppBodySidebar = ({ type = "default" }) => {
                         <div className={sidebarClassName + '-container-subcontent'}>
                             {renderSidebarDataContent(data.content)}
                         </div>}
-                </>
+                </div>
             )
         })
     }
