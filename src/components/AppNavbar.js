@@ -8,7 +8,7 @@ import ProfileLogo from '../images/icons/person-fill.svg';
 import './AppNavbar.scss';
 import { useState } from "react";
 
-const AppNavbar = ({ type = "default" }) => {
+const AppNavbar = ({ type = "default", openNotification, openProfile }) => {
     const navbarClassName = 'app-navbar-' + type;
     const courses = ['OET', 'CBT', 'OSCE', 'IELTS'];
     const [selectedCourse, setSelectedCourse] = useState('OET');
@@ -24,8 +24,8 @@ const AppNavbar = ({ type = "default" }) => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className={navbarClassName + '__container-settings'}>
                         <AppDropdown options={courses} selectedOption={selectedCourse} onChange={(option) => setSelectedCourse(option)} />
-                        <Nav.Link href="#link"><img src={NotificationLogo} alt={'notify'} /></Nav.Link>
-                        <Nav.Link href="#link"><img src={ProfileLogo} alt={'profile'} /></Nav.Link>
+                        <Nav.Item><img className={navbarClassName + '__container-settings-item'} src={NotificationLogo} alt={'notify'} onClick={()=>openNotification()}/></Nav.Item>
+                        <Nav.Item><img className={navbarClassName + '__container-settings-item'} src={ProfileLogo} alt={'profile'} onClick={()=>openProfile()}/></Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

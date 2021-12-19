@@ -19,6 +19,10 @@
             }
             &-settings{
                 margin-left: auto;
+                &-item{
+                    cursor: pointer;
+                    padding-left:10px;
+                }
             }    
         }
     }
