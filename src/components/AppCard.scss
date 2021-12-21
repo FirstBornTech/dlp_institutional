@@ -18,6 +18,29 @@
         &__description{
             font-size: 18px;
         }
+        &__cards{
+            display: flex;
+            &-section{
+                display: flex;
+            }
+            &-type{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                &-logo{
+                    width: 40px;
+                }
+                &-title{
+                    font-size: 21px;
+                }
+            }
+            &-progress{
+                width:50%;      
+                &-bar{
+                    margin: auto;
+                }     
+            }
+        }
     }
     &-secondary{
         background-color: $cardSecondaryBackgroundColor;
@@ -35,6 +58,29 @@
         }
         &__description{
             font-size: 18px;
+        }
+        &__cards{
+            display: flex;
+            &-section{
+                display: flex;
+            }
+            &-type{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                &-logo{
+                    width: 40px;
+                }
+                &-title{
+                    font-size: 23px;
+                }
+            }
+            &-progress{
+                width:50%;      
+                &-bar{
+                    margin: auto;
+                }     
+            }
         }
     }
 }

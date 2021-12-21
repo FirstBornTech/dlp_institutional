@@ -14,6 +14,12 @@ import SupportSelectedIcon from '../images/icons/support-black.svg';
 import SupportUnselectedIcon from '../images/icons/support-white.svg';
 import ContactSelectedIcon from '../images/icons/contact-black.svg';
 import ContactUnselectedIcon from '../images/icons/contact-white.svg';
+import CourseMaterialSelectedIcon from '../images/icons/book-white.svg';
+import CourseMaterialUnselectedIcon from '../images/icons/book-blue.svg';
+import TipsSelectedIcon from '../images/icons/tips-white.svg';
+import TipsUnselectedIcon from '../images/icons/tips-blue.svg';
+import MockTestSelectedIcon from '../images/icons/mock-test-white.svg';
+import MockTestUnselectedIcon from '../images/icons/mock-test-blue.svg';
 
 export const sidebarData = [
     {
@@ -77,14 +83,20 @@ export const sidebarData = [
 export const contentType = [
     {
         key: 1,
-        name: 'Course Material'
+        name: 'Course Material',
+        selectedIcon: CourseMaterialSelectedIcon,
+        unselectedIcon: CourseMaterialUnselectedIcon
     },
     {
         key: 2,
-        name: 'Super Tips!'
+        name: 'Super Tips!',
+        selectedIcon: TipsSelectedIcon,
+        unselectedIcon: TipsUnselectedIcon
     },
     {
         key: 3,
-        name: 'Mock test'
+        name: 'Mock Test',
+        selectedIcon: MockTestSelectedIcon,
+        unselectedIcon: MockTestUnselectedIcon
     },
 ] 

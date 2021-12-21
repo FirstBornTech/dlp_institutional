@@ -1,0 +1,22 @@
+.reading{
+    &-default{
+        &__cards{
+            display: flex;
+            &-section{
+                display: flex;
+            }
+            &-type{
+                width: 50%;
+            }
+            &-progress{
+                width:50%; 
+                &-bar{
+                    margin: 20px;
+                    width: 200px;
+                    height: 200px;
+                    position: relative;
+                }           
+            }
+        }
+    }
+}
