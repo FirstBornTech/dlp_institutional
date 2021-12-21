@@ -4,10 +4,14 @@
     &-default{
         margin: auto 0;
         &-toggle{
+            border-radius: 25px;
             min-width: 150px;
             text-align: left;
             display: flex;
             justify-content: space-between;
+        }
+        &-menu{
+            border-radius: 25px;
         }
         .dropdown-toggle::after {
             margin: auto 0;
