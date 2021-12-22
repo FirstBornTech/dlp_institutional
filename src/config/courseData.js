@@ -84,18 +84,21 @@ export const contentType = [
     {
         key: 1,
         name: 'Course Material',
+        path: 'course',
         selectedIcon: CourseMaterialSelectedIcon,
         unselectedIcon: CourseMaterialUnselectedIcon
     },
     {
         key: 2,
         name: 'Super Tips!',
+        path: 'tips',
         selectedIcon: TipsSelectedIcon,
         unselectedIcon: TipsUnselectedIcon
     },
     {
         key: 3,
         name: 'Mock Test',
+        path: 'mock',
         selectedIcon: MockTestSelectedIcon,
         unselectedIcon: MockTestUnselectedIcon
     },

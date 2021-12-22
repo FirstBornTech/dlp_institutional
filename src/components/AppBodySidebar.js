@@ -19,7 +19,6 @@ const AppBodySidebar = ({ type = "default" ,sidebarData, selectedSidebarData, si
     }
 
     const renderSidebarDataContent = (content) => {
-        console.log(content,'45646546')
         return content.map((data, index) => {
             return (
                 <div key={index}>

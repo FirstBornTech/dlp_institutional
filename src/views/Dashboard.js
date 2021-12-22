@@ -13,7 +13,7 @@ const Dashboard = () => {
     const [allCourseDetail,setAllCourseDetail] = useState([]);
     const [selectedCourse, setSelectedCourse] = useState({});
     const [selectedSidebarData, setSelectedSidebarData] = useState(0);
-    const [selectedContentType, setSelectedContentType] = useState(contentType[0]);
+    const [selectedContentType, setSelectedContentType] = useState(0);
     const [sidebarDataContent, setSidebarDataContent] = useState([])
     const [selectedSidebarDataContent, setSelectedSidebarDataContent]= useState(0);
     const [selectedSidebarDataSubcontent, setSelectedSidebarDataSubcontent]= useState(0);
@@ -24,7 +24,7 @@ const Dashboard = () => {
 
     useEffect(()=>{
         getCourseData();
-    },[selectedSidebarData])
+    },[selectedSidebarData,selectedContentType,selectedCourse])
 
     const appInitialisation = () =>{
         getUser();
@@ -47,8 +47,8 @@ const Dashboard = () => {
     }
 
     const getCourseData = async()=>{
-        if(sidebarData[selectedSidebarData].key === 3 || sidebarData[selectedSidebarData].key === 4 || sidebarData[selectedSidebarData].key === 5 ){
-            const content = await getContentById(sidebarData[selectedSidebarData].title,selectedContentType.key,selectedCourse.id);
+        if(sidebarData[selectedSidebarData].key === 3 || sidebarData[selectedSidebarData].key === 4 || sidebarData[selectedSidebarData].key === 5 || sidebarData[selectedSidebarData].key === 6 ){
+            const content = await getContentById(sidebarData[selectedSidebarData].title,contentType[selectedContentType].path,selectedCourse.id);
             setSidebarDataContent(content);
         }
         else{
@@ -73,6 +73,8 @@ const Dashboard = () => {
                 changeSidebarData={(e)=>setSelectedSidebarData(e)}
                 changeSidebarDataContent={(e)=>setSelectedSidebarDataContent(e)}
                 changeSidebarDataSubcontent={(e)=>setSelectedSidebarDataSubcontent(e)}
+                selectedContentType={selectedContentType}
+                changeContentType={(e)=>setSelectedContentType(e)}
             />
             <Offcanvas className="app-dashboard__offcanvas" show={showProfileSetting} placement={'end'} name={'end'} onHide={()=>setShowProfileSetting(false)} >
                 <Offcanvas.Header closeButton>

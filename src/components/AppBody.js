@@ -2,7 +2,19 @@ import AppBodySidebar from './AppBodySidebar';
 import AppBodyContent from './AppBodyContent';
 import './AppBody.scss';
 
-const AppBody = ({ type = "default", sidebarData, selectedSidebarData, sidebarDataContent, selectedSidebarDataContent, selectedSidebarDataSubcontent,changeSidebarData,changeSidebarDataContent,changeSidebarDataSubcontent }) => {
+const AppBody = ({ 
+        type = "default", 
+        sidebarData, 
+        selectedSidebarData, 
+        sidebarDataContent, 
+        selectedSidebarDataContent, 
+        selectedSidebarDataSubcontent,
+        changeSidebarData,
+        changeSidebarDataContent,
+        changeSidebarDataSubcontent,
+        selectedContentType,
+        changeContentType
+     }) => {
     const appBodyClassName = 'app-body-' + type;
     return (
         <div className={appBodyClassName}>
@@ -18,7 +30,10 @@ const AppBody = ({ type = "default", sidebarData, selectedSidebarData, sidebarDa
                     changeSidebarDataContent={(e)=>changeSidebarDataContent(e)}
                     changeSidebarDataSubcontent={(e)=>changeSidebarDataSubcontent(e)}
                 />
-                <AppBodyContent />
+                <AppBodyContent 
+                    selectedContentType={selectedContentType}
+                    changeContentType={(e)=>changeContentType(e)}
+                />
             </div>
         </div>
     )

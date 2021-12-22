@@ -2,14 +2,14 @@ import './AppCard.scss';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-const AppCard = ({ type = 'default', size = 'small', header, description, children, contentType}) => {
+const AppCard = ({ type = 'default', size = 'small', header, description, children, contentType, onCardClick}) => {
     const cardClassName = "app-card-" + type;
     return (
         <div className={`${cardClassName} ${size}`}>
             {header && <div className={cardClassName + '__header'}>{header}</div>}
             {description && <div className={cardClassName + '__description'}>{description}</div>}
             {contentType &&
-                <div className={cardClassName + '__cards-section'}>
+                <div className={cardClassName + '__cards-section'} onClick={()=>onCardClick()}>
                     <div className={cardClassName + '__cards-type'}>
                     <div>
                         <img 
