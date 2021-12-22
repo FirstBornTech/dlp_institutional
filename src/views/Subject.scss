@@ -1,7 +1,9 @@
-.reading{
+.subject{
     &-default{
+        width: 100%;
         &__cards{
             display: flex;
+            justify-content: space-evenly;
             &-section{
                 display: flex;
             }
@@ -17,6 +19,9 @@
                     position: relative;
                 }           
             }
+        }
+        &__content{
+            width: 100%;
         }
     }
 }

@@ -135,19 +135,19 @@ export const courseContentData = (sidebarSelection,optionSelection,courseId) => 
                         ]
                         case 'Writing': return [
                             {
-                                key: 2,
+                                key: 1,
                                 title :' Read-Tips'
                             }
                         ]
                         case 'Listening': return [
                             {
-                                key: 3,
+                                key: 1,
                                 title :' Listen-Tips'
                             }
                         ]
                         case 'Speaking': return [
                             {
-                                key: 4,
+                                key: 1,
                                 title :' Speak-Tips'
                             }
                         ]
@@ -164,19 +164,19 @@ export const courseContentData = (sidebarSelection,optionSelection,courseId) => 
                         ]
                         case 'Writing': return [
                             {
-                                key: 2,
+                                key: 1,
                                 title :' Read-Mock'
                             }
                         ]
                         case 'Listening': return [
                             {
-                                key: 3,
+                                key: 1,
                                 title :' Listen-Mock'
                             }
                         ]
                         case 'Speaking': return [
                             {
-                                key: 4,
+                                key: 1,
                                 title :' Speak-Mock'
                             }
                         ]

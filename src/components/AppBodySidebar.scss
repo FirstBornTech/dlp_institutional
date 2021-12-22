@@ -3,6 +3,7 @@
 .app-sidebar{
     &-default{
         width: 250px;
+        min-width: 250px;
         background-color: $sidebarBackgroundColor;
         color: $sidebarTextColor;
         font-size: 21px;
