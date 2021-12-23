@@ -1,27 +1,29 @@
-export const userDetail = {userId:101, userName: 'binusuresh', emailId:'binu.suresh@gmail.com'}
+export const userDetail = { userId: 101, userName: 'binusuresh', emailId: 'binu.suresh@gmail.com' }
 
 export const allCourseData = [{ id: 1, courseTitle: 'OET' },
 { id: 2, courseTitle: 'CBT' },
 { id: 3, courseTitle: 'OSCE' },
 { id: 4, courseTitle: 'IELTS' }];
 
-export const courseContentData = (sidebarSelection,optionSelection,courseId) => {
-    switch(courseId){
-        case 1 :
-        case 2 :
-        case 3 :
-        case 4 : {
-            switch(optionSelection){
+export const courseContentData = (sidebarSelection, optionSelection, courseId) => {
+    switch (courseId) {
+        case 1:
+        case 2:
+        case 3:
+        case 4: {
+            switch (optionSelection) {
                 case 'course': {
-                    switch(sidebarSelection){
+                    switch (sidebarSelection) {
                         case 'Reading': return [
                             {
                                 key: 1,
-                                title :' Read-Course',
+                                title: ' Read-Course',
+                                status: 'completed',
                                 subcontent: [
                                     {
                                         key: 1,
-                                        title :' Read-Subcourse', 
+                                        title: ' Read-Subcourse',
+                                        status: 'completed'
                                     }
                                 ]
                             }
@@ -29,83 +31,101 @@ export const courseContentData = (sidebarSelection,optionSelection,courseId) => 
                         case 'Writing': return [
                             {
                                 key: 1,
-                                title: 'Introduction'
+                                title: 'Introduction',
+                                status: 'completed'
                             },
                             {
                                 key: 2,
                                 title: 'Understanding questions ',
+                                status: 'inprogress',
                                 subcontent: [
                                     {
                                         key: 1,
-                                        title: 'Vistiqulum'
+                                        title: 'Vistiqulum',
+                                        status: 'completed'
                                     },
                                     {
                                         key: 2,
-                                        title: 'Triqulum'
+                                        title: 'Triqulum',
+                                        status: 'inprogress'
                                     },
                                     {
                                         key: 3,
-                                        title: 'Aliquam'
+                                        title: 'Aliquam',
+                                        status: 'incompleted'
                                     }
                                 ]
                             },
                             {
                                 key: 3,
                                 title: 'Identify Keywords',
+                                status: 'incompleted',
                                 subcontent: [
                                     {
                                         key: 1,
-                                        title: 'Vistiqulum'
+                                        title: 'Vistiqulum',
+                                        status: 'incompleted'
                                     },
                                     {
                                         key: 2,
-                                        title: 'Triqulum'
+                                        title: 'Triqulum',
+                                        status: 'incompleted'
                                     }
                                 ]
                             },
                             {
                                 key: 4,
                                 title: 'The six questions',
+                                status: 'incompleted',
                                 subcontent: [
                                     {
                                         key: 1,
-                                        title: 'One'
+                                        title: 'One',
+                                        status: 'incompleted'
                                     },
                                     {
                                         key: 2,
-                                        title: 'Two'
+                                        title: 'Two',
+                                        status: 'incompleted'
                                     },
                                     {
                                         key: 3,
-                                        title: 'Three'
+                                        title: 'Three',
+                                        status: 'incompleted'
                                     },
                                     {
                                         key: 4,
-                                        title: 'Four'
+                                        title: 'Four',
+                                        status: 'incompleted'
                                     },
                                     {
                                         key: 5,
-                                        title: 'Five'
+                                        title: 'Five',
+                                        status: 'incompleted'
                                     },
                                     {
                                         key: 6,
-                                        title: 'Six'
+                                        title: 'Six',
+                                        status: 'incompleted'
                                     }
                                 ]
                             },
                             {
                                 key: 5,
-                                title: 'Categorise case note'
+                                title: 'Categorise case note',
+                                status: 'incompleted'
                             },
                         ];
                         case 'Speaking': return [
                             {
                                 key: 1,
-                                title :' Speak-Course',
+                                title: ' Speak-Course',
+                                status: 'incompleted',
                                 subcontent: [
                                     {
                                         key: 1,
-                                        title :' Speak-Subcourse', 
+                                        title: ' Speak-Subcourse',
+                                        status: 'incompleted'
                                     }
                                 ]
                             }
@@ -113,11 +133,13 @@ export const courseContentData = (sidebarSelection,optionSelection,courseId) => 
                         case 'Listening': return [
                             {
                                 key: 1,
-                                title :' Listen-Course',
+                                title: ' Listen-Course',
+                                status: 'incompleted',
                                 subcontent: [
                                     {
                                         key: 1,
-                                        title :' Listen-Subcourse', 
+                                        title: ' Listen-Subcourse',
+                                        status: 'incompleted'
                                     }
                                 ]
                             }
@@ -126,58 +148,66 @@ export const courseContentData = (sidebarSelection,optionSelection,courseId) => 
                     }
                 }
                 case 'tips': {
-                    switch(sidebarSelection){
+                    switch (sidebarSelection) {
                         case 'Reading': return [
                             {
                                 key: 1,
-                                title :' Read-Tips'
+                                title: ' Read-Tips',
+                                status: 'completed'
                             }
                         ]
                         case 'Writing': return [
                             {
                                 key: 1,
-                                title :' Read-Tips'
+                                title: ' Write-Tips',
+                                status: 'completed'
                             }
                         ]
                         case 'Listening': return [
                             {
                                 key: 1,
-                                title :' Listen-Tips'
+                                title: ' Listen-Tips',
+                                status: 'incompleted'
                             }
                         ]
                         case 'Speaking': return [
                             {
                                 key: 1,
-                                title :' Speak-Tips'
+                                title: ' Speak-Tips',
+                                status: 'incompleted'
                             }
                         ]
                         default: return [];
                     }
                 }
                 case 'mock': {
-                    switch(sidebarSelection){
+                    switch (sidebarSelection) {
                         case 'Reading': return [
                             {
                                 key: 1,
-                                title :' Read-Mock'
+                                title: ' Read-Mock',
+                                status: 'incompleted'
                             }
                         ]
                         case 'Writing': return [
                             {
                                 key: 1,
-                                title :' Read-Mock'
+                                title: ' Write-Mock',
+                                status: 'incompleted'
                             }
                         ]
                         case 'Listening': return [
                             {
                                 key: 1,
-                                title :' Listen-Mock'
+                                title: ' Listen-Mock',
+                                status: 'incompleted'
                             }
                         ]
                         case 'Speaking': return [
                             {
                                 key: 1,
-                                title :' Speak-Mock'
+                                title: ' Speak-Mock',
+                                status: 'incompleted'
                             }
                         ]
                         default: return [];
@@ -186,6 +216,6 @@ export const courseContentData = (sidebarSelection,optionSelection,courseId) => 
                 default: return [];
             }
         }
-        default : return [];
+        default: return [];
     }
 }

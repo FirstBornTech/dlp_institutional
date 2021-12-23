@@ -5,3 +5,4 @@ Major modules:
 - node-sass (styling)
 - react-bootstrap (styling)
 - react-router-dom (routing)
+- react-circular-progressbar (for custom progress)

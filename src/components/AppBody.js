@@ -29,6 +29,7 @@ const AppBody = ({
                     changeSidebarData={(e)=>changeSidebarData(e)}
                     changeSidebarDataContent={(e)=>changeSidebarDataContent(e)}
                     changeSidebarDataSubcontent={(e)=>changeSidebarDataSubcontent(e)}
+                    changeContentType={(e)=>changeContentType(e)}
                 />
                 <AppBodyContent 
                     selectedContentType={selectedContentType}

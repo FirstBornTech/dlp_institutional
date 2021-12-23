@@ -1,5 +1,6 @@
 import AppCard from "../components/AppCard";
 import { contentType } from "../config/courseData";
+import AppButton from "../components/AppButton";
 import './Subject.scss';
 
 const Subject = ({ type = 'default', selectedContentType, changeContentType }) => {
@@ -12,6 +13,7 @@ const Subject = ({ type = 'default', selectedContentType, changeContentType }) =
                 <AppCard type={`${selectedContentType !== 2 ? 'secondary' : 'default'}`} contentType={contentType[2]} onCardClick={() => changeContentType(2)} />
             </div>
             <div className={homeClassName + '__content'}>
+                <AppButton className={homeClassName + '__content-button'} label="Click here to move to next module"></AppButton>
             </div>
         </div>
     )
