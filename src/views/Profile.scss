@@ -1,0 +1,22 @@
+.profile{
+    &-default{
+        &__content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-avatar{
+                border: 4px solid lightgray;
+                border-radius: 100%;
+                height: 150px;
+                width: 150px;
+            }
+            &-name{
+                font-weight: 500;
+                margin-top: 20px;
+            }
+            &-email{
+                font-weight: 400;
+            }
+        }
+    }
+}

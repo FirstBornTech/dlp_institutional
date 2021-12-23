@@ -1,0 +1,7 @@
+@import '../sass/colors';
+
+.app-offcanvas{
+    &-default{
+        color: $offcanvasTextColor;
+    }
+}

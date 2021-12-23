@@ -5,6 +5,8 @@ import './Dashboard.scss';
 import { useEffect, useState } from "react";
 import { getCourseDetail, getUserDetail,getContentById } from "../services/api.services";
 import { sidebarData, contentType } from '../config/courseData';
+import Notification from "./Notifications";
+import Profile from "./Profile";
 
 const Dashboard = () => {
     const [showProfileSetting, setShowProfileSetting] = useState(false);
@@ -76,24 +78,15 @@ const Dashboard = () => {
                 selectedContentType={selectedContentType}
                 changeContentType={(e)=>setSelectedContentType(e)}
             />
-            <Offcanvas className="app-dashboard__offcanvas" show={showProfileSetting} placement={'end'} name={'end'} onHide={()=>setShowProfileSetting(false)} >
-                <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Profile Settings</Offcanvas.Title>
-                </Offcanvas.Header>
-                <Offcanvas.Body>
-                    Some text as placeholder. In real life you can have the elements you
-                    have chosen. Like, text, images, lists, etc.
-                </Offcanvas.Body>
-            </Offcanvas>
-            <Offcanvas className="app-dashboard__offcanvas" show={showNotifications} placement={'end'} name={'end'} onHide={()=>setShowNotifications(false)} >
-                <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Notifications</Offcanvas.Title>
-                </Offcanvas.Header>
-                <Offcanvas.Body>
-                    Some text as placeholder. In real life you can have the elements you
-                    have chosen. Like, text, images, lists, etc.
-                </Offcanvas.Body>
-            </Offcanvas>
+            <Notification showNotifications={showNotifications} closeNotifications={()=>setShowNotifications(false)}>
+
+            </Notification>
+            <Profile 
+                showProfileSetting={showProfileSetting} 
+                closeProfileSetting={()=>setShowProfileSetting(false)}
+                userDetail={userDetail}>
+
+            </Profile>
         </div>
     )
 }
