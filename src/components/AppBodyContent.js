@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from '../views/Home';
 import Subject from '../views/Subject';
 
@@ -24,7 +24,7 @@ const AppBodyContent = ({ selectedContentType, changeContentType }) => {
                             changeContentType={(e) => changeContentType(e)} />} />
                 <Route path="/Support" element={<Home />} />
                 <Route path="/Contact" element={<Home />} />
-                {/* <Route path="about" element={<About />} /> */}
+                <Route path="*" element={<Navigate to ="/" />}/>
             </Routes>
         </>
     )

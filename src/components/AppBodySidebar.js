@@ -1,8 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom'
 import { Link } from "react-router-dom";
 import './AppBodySidebar.scss'
-const AppBodySidebar = ({ type = "default" ,sidebarData, selectedSidebarData, sidebarDataContent, selectedSidebarDataContent, selectedSidebarDataSubcontent,changeSidebarData,changeSidebarDataContent,changeSidebarDataSubcontent,changeContentType}) => {
+const AppBodySidebar = ({ type = "default", sidebarData, selectedSidebarData, sidebarDataContent, selectedSidebarDataContent, selectedSidebarDataSubcontent, changeSidebarData, changeSidebarDataContent, changeSidebarDataSubcontent, changeContentType }) => {
     const sidebarClassName = 'app-sidebar-' + type;
+    const location = useLocation();
+
+    useEffect(() => {
+        if (sidebarData[selectedSidebarData].path !== location.pathname) {
+            sidebarData.forEach((data) => {
+                if (data.path === location.pathname) {
+                    changeSidebarData(data.key - 1);
+                    changeSidebarDataContent(0);
+                    changeSidebarDataSubcontent(0);
+                    changeContentType(0);
+                }
+            })
+        }
+    }, [location])
 
     const renderSidebarDataSubcontent = (key, content) => {
         return content.map((data, index) => {
@@ -56,7 +71,7 @@ const AppBodySidebar = ({ type = "default" ,sidebarData, selectedSidebarData, si
                             {data.title}
                         </div>
                     </Link>
-                    {(selectedSidebarData === index && sidebarDataContent.length>0) &&
+                    {(selectedSidebarData === index && sidebarDataContent.length > 0) &&
                         <div className={sidebarClassName + '-container-subcontent'}>
                             {renderSidebarDataContent(sidebarDataContent)}
                         </div>}
