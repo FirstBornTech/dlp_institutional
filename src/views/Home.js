@@ -6,10 +6,8 @@ const Home = ({type='default'}) => {
     return(
         <div className={homeClassName}>
             <div className={homeClassName+'__cards'}>
-                <AppCard header={'Statistics'}/>
-                <AppCard type={'secondary'} header={'Statistics'}/>
                 <AppCard size={'medium'} header={'Statistics'}/>
-                <AppCard size={'medium'} type={'secondary'} header={'Statistics'}/>
+                <AppCard size={'medium'} type={'secondary'} header={'Announcements'}/>
             </div>
         </div>
     )

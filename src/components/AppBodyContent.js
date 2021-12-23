@@ -1,13 +1,16 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+import Contact from "../views/Contact";
 import Home from '../views/Home';
+import Introduction from "../views/Introduction";
 import Subject from '../views/Subject';
+import Support from "../views/Support";
 
 const AppBodyContent = ({ selectedContentType, changeContentType }) => {
     return (
         <>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/Introduction" element={<Home />} />
+                <Route path="/Introduction" element={<Introduction />} />
                 <Route path="/Reading"
                     element={
                         <Subject
@@ -22,8 +25,8 @@ const AppBodyContent = ({ selectedContentType, changeContentType }) => {
                 <Route path="/Listening" element={<Subject
                             selectedContentType={selectedContentType}
                             changeContentType={(e) => changeContentType(e)} />} />
-                <Route path="/Support" element={<Home />} />
-                <Route path="/Contact" element={<Home />} />
+                <Route path="/Support" element={<Support />} />
+                <Route path="/Contact" element={<Contact />} />
                 <Route path="*" element={<Navigate to ="/" />}/>
             </Routes>
         </>
