@@ -14,9 +14,18 @@
             text-align: right;
             padding-right: 10px;
             border-right: 5px solid $cardPrimaryTextColor;
+            margin-bottom:20px
         }
         &__description{
             font-size: 18px;
+        }
+        &__children{
+            overflow: hidden;
+            height: 70%;
+            &-content{
+                overflow-y: auto;
+                height: 100%;
+            }
         }
         &__cards{
             display: flex;
@@ -58,9 +67,18 @@
             text-align: right;
             padding-right: 10px;
             border-right: 5px solid $cardSecondaryTextColor;
+            margin-bottom:20px
         }
         &__description{
             font-size: 18px;
+        }
+        &__children{
+            overflow: hidden;
+            height: 70%;
+            &-content{
+                overflow-y: auto;
+                height: 100%;
+            }
         }
         &__cards{
             display: flex;

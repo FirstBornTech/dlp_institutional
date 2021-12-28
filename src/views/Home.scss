@@ -1,9 +1,15 @@
+@import '../sass/colors';
+
 .home{
     &-default{
         width:100%;
         &__cards{
             display: flex;
             justify-content: space-evenly;
+        }
+        &__content{
+            padding: 20px;
+            color: $bodyContentTextColor;
         }
     }
 }

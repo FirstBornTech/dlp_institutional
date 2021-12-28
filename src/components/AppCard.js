@@ -30,7 +30,11 @@ const AppCard = ({ type = 'default', size = 'small', header, description, childr
                     </div>
                 </div>
             }
-            {children}
+            <div className={cardClassName + '__children'}>
+                <div className={cardClassName + '__children-content'}>
+                {children}
+                </div>
+            </div>
         </div>
     )
 }
