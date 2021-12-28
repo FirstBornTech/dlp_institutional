@@ -1,3 +1,5 @@
+@import '../sass/colors';
+
 .subject{
     &-default{
         width: 100%;
@@ -22,8 +24,14 @@
         }
         &__content{
             width: 100%;
+            padding: 20px;
+            color: $bodyContentTextColor;
+        }
+        &__btn-section{
+            width: 100%;
             display: flex;
             justify-content: center;
+            margin-bottom: 40px;
             &-button{
                 width: 500px !important;
             }
