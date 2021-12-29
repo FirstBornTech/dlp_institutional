@@ -23,6 +23,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                                     {
                                         key: 1,
                                         title: ' Read-Subcourse',
+                                        content : staticContentPage('Reading'),
                                         status: 'completed'
                                     }
                                 ]
@@ -32,6 +33,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: 'Introduction',
+                                content : staticContentPage('Writing'),
                                 status: 'completed'
                             },
                             {
@@ -42,11 +44,13 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                                     {
                                         key: 1,
                                         title: 'Vistiqulum',
+                                        content : staticContentPage('Vistiqulum'),
                                         status: 'completed'
                                     },
                                     {
                                         key: 2,
                                         title: 'Triqulum',
+                                        content : staticContentPage('Triqulum'),
                                         status: 'inprogress'
                                     },
                                     {
@@ -120,12 +124,13 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: ' Speak-Course',
-                                status: 'incompleted',
+                                status: 'inprogress',
                                 subcontent: [
                                     {
                                         key: 1,
                                         title: ' Speak-Subcourse',
-                                        status: 'incompleted'
+                                        content : staticContentPage('Speaking'),
+                                        status: 'inprogress'
                                     }
                                 ]
                             }
@@ -134,12 +139,13 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: ' Listen-Course',
-                                status: 'incompleted',
+                                status: 'inprogress',
                                 subcontent: [
                                     {
                                         key: 1,
                                         title: ' Listen-Subcourse',
-                                        status: 'incompleted'
+                                        content : staticContentPage('Listening'),
+                                        status: 'inprogress'
                                     }
                                 ]
                             }
@@ -167,14 +173,14 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: ' Listen-Tips',
-                                status: 'incompleted'
+                                status: 'inprogress'
                             }
                         ]
                         case 'Speaking': return [
                             {
                                 key: 1,
                                 title: ' Speak-Tips',
-                                status: 'incompleted'
+                                status: 'inprogress'
                             }
                         ]
                         default: return [];
@@ -186,28 +192,28 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: ' Read-Mock',
-                                status: 'incompleted'
+                                status: 'inprogress'
                             }
                         ]
                         case 'Writing': return [
                             {
                                 key: 1,
                                 title: ' Write-Mock',
-                                status: 'incompleted'
+                                status: 'inprogress'
                             }
                         ]
                         case 'Listening': return [
                             {
                                 key: 1,
                                 title: ' Listen-Mock',
-                                status: 'incompleted'
+                                status: 'inprogress'
                             }
                         ]
                         case 'Speaking': return [
                             {
                                 key: 1,
                                 title: ' Speak-Mock',
-                                status: 'incompleted'
+                                status: 'inprogress'
                             }
                         ]
                         default: return [];
@@ -218,4 +224,45 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
         }
         default: return [];
     }
+}
+
+const staticContentPage = (content) => {
+    return(
+        <>
+        <h1>{content} Course Content</h1>
+                <p>
+                    Morbi dictum. Vestibulum adipiscing
+                    pulvinar quam. In aliquam rhoncus sem.
+                    In mi erat, sodaleseget, pretium interdum,
+                    malesuada ac, augue. Aliquam sollicitudin
+                    Morbi dictum. Vestibulum adipiscing
+                    pulvinar quam. In aliquam rhoncus sem.
+                    In mi erat, sodaleseget, pretium interdum,
+                    malesuada ac, augue. Aliquam sollicitudinMorbi dictum. Vestibulum adipiscing
+                    pulvinar quam. In aliquam rhoncus sem.
+                    In mi erat, sodaleseget, pretium interdum,
+                    malesuada ac, augue. Aliquam sollicitudin
+                </p>
+                <br />
+                <div style={{textAlign:'center'}}>
+                <iframe width="420" height="315" title="youtube" 
+                    src="https://www.youtube.com/embed/6ncL7kUFBsI">
+                </iframe>
+                </div>
+                <br/>
+                <p>
+                    Morbi dictum. Vestibulum adipiscing
+                    pulvinar quam. In aliquam rhoncus sem.
+                    In mi erat, sodaleseget, pretium interdum,
+                    malesuada ac, augue. Aliquam sollicitudin
+                    Morbi dictum. Vestibulum adipiscing
+                    pulvinar quam. In aliquam rhoncus sem.
+                    In mi erat, sodaleseget, pretium interdum,
+                    malesuada ac, augue. Aliquam sollicitudinMorbi dictum. Vestibulum adipiscing
+                    pulvinar quam. In aliquam rhoncus sem.
+                    In mi erat, sodaleseget, pretium interdum,
+                    malesuada ac, augue. Aliquam sollicitudin
+                </p>
+        </>
+    )
 }

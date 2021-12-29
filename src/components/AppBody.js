@@ -13,7 +13,8 @@ const AppBody = ({
         changeSidebarDataContent,
         changeSidebarDataSubcontent,
         selectedContentType,
-        changeContentType
+        changeContentType,
+        displayContent
      }) => {
     const appBodyClassName = 'app-body-' + type;
     return (
@@ -33,6 +34,7 @@ const AppBody = ({
                 />
                 <AppBodyContent 
                     selectedContentType={selectedContentType}
+                    displayContent={displayContent}
                     changeContentType={(e)=>changeContentType(e)}
                 />
             </div>

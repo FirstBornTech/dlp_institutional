@@ -5,7 +5,7 @@ import Introduction from "../views/Introduction";
 import Subject from '../views/Subject';
 import Support from "../views/Support";
 
-const AppBodyContent = ({ selectedContentType, changeContentType }) => {
+const AppBodyContent = ({ selectedContentType, changeContentType, displayContent }) => {
     return (
         <>
             <Routes>
@@ -15,15 +15,19 @@ const AppBodyContent = ({ selectedContentType, changeContentType }) => {
                     element={
                         <Subject
                             selectedContentType={selectedContentType}
+                            displayContent={displayContent}
                             changeContentType={(e) => changeContentType(e)} />} />
                 <Route path="/Writing" element={<Subject
                             selectedContentType={selectedContentType}
+                            displayContent={displayContent}
                             changeContentType={(e) => changeContentType(e)} />} />
                 <Route path="/Speaking" element={<Subject
                             selectedContentType={selectedContentType}
+                            displayContent={displayContent}
                             changeContentType={(e) => changeContentType(e)} />} />
                 <Route path="/Listening" element={<Subject
                             selectedContentType={selectedContentType}
+                            displayContent={displayContent}
                             changeContentType={(e) => changeContentType(e)} />} />
                 <Route path="/Support" element={<Support />} />
                 <Route path="/Contact" element={<Contact />} />

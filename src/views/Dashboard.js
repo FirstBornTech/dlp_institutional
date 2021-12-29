@@ -1,6 +1,5 @@
 import AppNavbar from "../components/AppNavbar"
 import AppBody from "../components/AppBody";
-import Offcanvas from "react-bootstrap/Offcanvas";
 import './Dashboard.scss';
 import { useEffect, useState } from "react";
 import { getCourseDetail, getUserDetail,getContentById } from "../services/api.services";
@@ -19,6 +18,9 @@ const Dashboard = () => {
     const [sidebarDataContent, setSidebarDataContent] = useState([])
     const [selectedSidebarDataContent, setSelectedSidebarDataContent]= useState(0);
     const [selectedSidebarDataSubcontent, setSelectedSidebarDataSubcontent]= useState(0);
+    const [displayContent, setDisplayContent] =useState(
+        <div>No Data</div>
+    )
 
     useEffect(()=>{
         appInitialisation();
@@ -26,7 +28,7 @@ const Dashboard = () => {
 
     useEffect(()=>{
         getCourseData();
-    },[selectedSidebarData,selectedContentType,selectedCourse])
+    },[selectedSidebarData,selectedSidebarDataContent,selectedSidebarDataSubcontent,selectedContentType,selectedCourse])
 
     const appInitialisation = () =>{
         getUser();
@@ -50,8 +52,13 @@ const Dashboard = () => {
 
     const getCourseData = async()=>{
         if(sidebarData[selectedSidebarData].key === 3 || sidebarData[selectedSidebarData].key === 4 || sidebarData[selectedSidebarData].key === 5 || sidebarData[selectedSidebarData].key === 6 ){
-            const content = await getContentById(sidebarData[selectedSidebarData].title,contentType[selectedContentType].path,selectedCourse.id);
-            setSidebarDataContent(content);
+            const data = await getContentById(sidebarData[selectedSidebarData].title,contentType[selectedContentType].path,selectedCourse.id);
+            setSidebarDataContent(data);
+            if(data[selectedSidebarDataContent].subcontent){
+                setDisplayContent(data[selectedSidebarDataContent].subcontent[selectedSidebarDataSubcontent].content)
+            }
+            else
+            setDisplayContent(data[selectedSidebarDataContent].content)
         }
         else{
             setSidebarDataContent([]);
@@ -77,6 +84,7 @@ const Dashboard = () => {
                 changeSidebarDataSubcontent={(e)=>setSelectedSidebarDataSubcontent(e)}
                 selectedContentType={selectedContentType}
                 changeContentType={(e)=>setSelectedContentType(e)}
+                displayContent={displayContent}
             />
             <Notification showNotifications={showNotifications} closeNotifications={()=>setShowNotifications(false)}>
 
