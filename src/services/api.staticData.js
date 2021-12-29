@@ -1,4 +1,4 @@
-export const userDetail = { userId: 101, userName: 'binusuresh', firstName:'Binu', lastName:'Suresh', emailId: 'binu.suresh@gmail.com', password: 'binu123' }
+export const userDetail = { userId: 101, userName: 'binusuresh', firstName: 'Binu', lastName: 'Suresh', emailId: 'binu.suresh@gmail.com', password: 'binu123' }
 
 export const allCourseData = [{ id: 1, courseTitle: 'OET' },
 { id: 2, courseTitle: 'CBT' },
@@ -23,7 +23,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                                     {
                                         key: 1,
                                         title: ' Read-Subcourse',
-                                        content : staticContentPage('Reading'),
+                                        content: staticContentPage('Reading'),
                                         status: 'completed'
                                     }
                                 ]
@@ -33,7 +33,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: 'Introduction',
-                                content : staticContentPage('Writing'),
+                                content: staticContentPage('Writing'),
                                 status: 'completed'
                             },
                             {
@@ -44,13 +44,13 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                                     {
                                         key: 1,
                                         title: 'Vistiqulum',
-                                        content : staticContentPage('Vistiqulum'),
+                                        content: staticContentPage('Vistiqulum'),
                                         status: 'completed'
                                     },
                                     {
                                         key: 2,
                                         title: 'Triqulum',
-                                        content : staticContentPage('Triqulum'),
+                                        content: staticContentPage('Triqulum'),
                                         status: 'inprogress'
                                     },
                                     {
@@ -129,7 +129,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                                     {
                                         key: 1,
                                         title: ' Speak-Subcourse',
-                                        content : staticContentPage('Speaking'),
+                                        content: staticContentPage('Speaking'),
                                         status: 'inprogress'
                                     }
                                 ]
@@ -144,7 +144,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                                     {
                                         key: 1,
                                         title: ' Listen-Subcourse',
-                                        content : staticContentPage('Listening'),
+                                        content: staticContentPage('Listening'),
                                         status: 'inprogress'
                                     }
                                 ]
@@ -159,6 +159,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: ' Read-Tips',
+                                content: staticTipsPage('Reading'),
                                 status: 'completed'
                             }
                         ]
@@ -166,6 +167,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: ' Write-Tips',
+                                content: staticTipsPage('Writing'),
                                 status: 'completed'
                             }
                         ]
@@ -173,6 +175,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: ' Listen-Tips',
+                                content: staticTipsPage('Listening'),
                                 status: 'inprogress'
                             }
                         ]
@@ -180,6 +183,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: ' Speak-Tips',
+                                content: staticTipsPage('Speaking'),
                                 status: 'inprogress'
                             }
                         ]
@@ -192,6 +196,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: ' Read-Mock',
+                                content: staticMockTestPage('Reading'),
                                 status: 'inprogress'
                             }
                         ]
@@ -199,6 +204,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: ' Write-Mock',
+                                content: staticMockTestPage('Writing'),
                                 status: 'inprogress'
                             }
                         ]
@@ -206,6 +212,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: ' Listen-Mock',
+                                content: staticMockTestPage('Listening'),
                                 status: 'inprogress'
                             }
                         ]
@@ -213,6 +220,7 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
                             {
                                 key: 1,
                                 title: ' Speak-Mock',
+                                content: staticMockTestPage('Speaking'),
                                 status: 'inprogress'
                             }
                         ]
@@ -227,42 +235,120 @@ export const courseContentData = (sidebarSelection, optionSelection, courseId) =
 }
 
 const staticContentPage = (content) => {
-    return(
+    return (
         <>
-        <h1>{content} Course Content</h1>
-                <p>
-                    Morbi dictum. Vestibulum adipiscing
-                    pulvinar quam. In aliquam rhoncus sem.
-                    In mi erat, sodaleseget, pretium interdum,
-                    malesuada ac, augue. Aliquam sollicitudin
-                    Morbi dictum. Vestibulum adipiscing
-                    pulvinar quam. In aliquam rhoncus sem.
-                    In mi erat, sodaleseget, pretium interdum,
-                    malesuada ac, augue. Aliquam sollicitudinMorbi dictum. Vestibulum adipiscing
-                    pulvinar quam. In aliquam rhoncus sem.
-                    In mi erat, sodaleseget, pretium interdum,
-                    malesuada ac, augue. Aliquam sollicitudin
-                </p>
-                <br />
-                <div style={{textAlign:'center'}}>
-                <iframe width="420" height="315" title="youtube" 
+            <h1>{content} Course Content</h1>
+            <p>
+                Morbi dictum. Vestibulum adipiscing
+                pulvinar quam. In aliquam rhoncus sem.
+                In mi erat, sodaleseget, pretium interdum,
+                malesuada ac, augue. Aliquam sollicitudin
+                Morbi dictum. Vestibulum adipiscing
+                pulvinar quam. In aliquam rhoncus sem.
+                In mi erat, sodaleseget, pretium interdum,
+                malesuada ac, augue. Aliquam sollicitudinMorbi dictum. Vestibulum adipiscing
+                pulvinar quam. In aliquam rhoncus sem.
+                In mi erat, sodaleseget, pretium interdum,
+                malesuada ac, augue. Aliquam sollicitudin
+            </p>
+            <br />
+            <div style={{ textAlign: 'center' }}>
+                <iframe width="420" height="315" title="youtube"
                     src="https://www.youtube.com/embed/6ncL7kUFBsI">
                 </iframe>
+            </div>
+            <br />
+            <p>
+                Morbi dictum. Vestibulum adipiscing
+                pulvinar quam. In aliquam rhoncus sem.
+                In mi erat, sodaleseget, pretium interdum,
+                malesuada ac, augue. Aliquam sollicitudin
+                Morbi dictum. Vestibulum adipiscing
+                pulvinar quam. In aliquam rhoncus sem.
+                In mi erat, sodaleseget, pretium interdum,
+                malesuada ac, augue. Aliquam sollicitudinMorbi dictum. Vestibulum adipiscing
+                pulvinar quam. In aliquam rhoncus sem.
+                In mi erat, sodaleseget, pretium interdum,
+                malesuada ac, augue. Aliquam sollicitudin
+            </p>
+        </>
+    )
+}
+
+const staticMockTestPage = (content) => {
+    return (
+        <>
+            <h1>{content} MockTest </h1>
+            <div class="container mt-sm-5 my-1">
+                <div class="question ml-sm-5 pl-sm-5 pt-2">
+                    <div class="py-2 h5"><b>Q1. malesuada ac, augue. Aliquam sollicitudinMorbi dictum. Vestibulum adipiscing?</b></div>
+                    <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options"
+                    style={{display:'flex',flexDirection:'column',marginLeft:'40px'}}>
+                        <label class="options">
+                            <input type="radio" name="radio" />
+                            <span class="checkmark" style={{marginRight:'10px'}}></span>
+                            Malesuada
+                        </label>
+                        <label class="options">
+                            <input type="radio" name="radio" />
+                            <span class="checkmark" style={{marginRight:'10px'}}></span>
+                            SollicitudinMorbi
+                        </label>
+                        <label class="options">
+                            <input type="radio" name="radio" />
+                            <span class="checkmark" style={{marginRight:'10px'}}></span>
+                            Adipiscing
+                        </label>
+                        <label class="options">
+                            <input type="radio" name="radio" />
+                            <span class="checkmark" style={{marginRight:'10px'}}></span>
+                            Vestibulum
+                        </label>
+                    </div>
                 </div>
-                <br/>
-                <p>
-                    Morbi dictum. Vestibulum adipiscing
-                    pulvinar quam. In aliquam rhoncus sem.
-                    In mi erat, sodaleseget, pretium interdum,
-                    malesuada ac, augue. Aliquam sollicitudin
-                    Morbi dictum. Vestibulum adipiscing
-                    pulvinar quam. In aliquam rhoncus sem.
-                    In mi erat, sodaleseget, pretium interdum,
-                    malesuada ac, augue. Aliquam sollicitudinMorbi dictum. Vestibulum adipiscing
-                    pulvinar quam. In aliquam rhoncus sem.
-                    In mi erat, sodaleseget, pretium interdum,
-                    malesuada ac, augue. Aliquam sollicitudin
-                </p>
+            </div>
+            <div class="container mt-sm-5 my-1">
+                <div class="question ml-sm-5 pl-sm-5 pt-2">
+                    <div class="py-2 h5"><b>Q2. which option best describes your job role?</b></div>
+                    <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options"
+                    style={{display:'flex',flexDirection:'column',marginLeft:'40px'}}>
+                        <label class="options">
+                            <input type="radio" name="radio" />
+                            <span class="checkmark" style={{marginRight:'10px'}}></span>
+                            Small Business Owner or Employee
+                        </label>
+                        <label class="options">
+                            <input type="radio" name="radio" />
+                            <span class="checkmark" style={{marginRight:'10px'}}></span>
+                            Nonprofit Owner or Employee
+                        </label>
+                        <label class="options">
+                            <input type="radio" name="radio" />
+                            <span class="checkmark" style={{marginRight:'10px'}}></span>
+                            Journalist or Activist
+                        </label>
+                        <label class="options">
+                            <input type="radio" name="radio" />
+                            <span class="checkmark" style={{marginRight:'10px'}}></span>
+                            Other
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+const staticTipsPage = (content) => {
+    return (
+        <>
+            <h1>{content} Tips </h1>
+            <ol>
+                <li>{content} malesuada ac, augue. Aliquam sollicitudin</li>
+                <li>In mi erat, sodaleseget, pretium interdum,</li>
+                <li>malesuada ac, augue. Aliquam sollicitudin</li>
+                <li>malesuada ac, augue. Aliquam sollicitudinMorbi dictum. Vestibulum adipiscing</li>
+            </ol>
         </>
     )
 }
