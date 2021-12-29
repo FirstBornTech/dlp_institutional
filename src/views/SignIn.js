@@ -3,9 +3,37 @@ import SignInContainer from '../components/SignInContainer';
 import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import AppButton from '../components/AppButton';
-const SignIn = ({ type = "default" }) => {
+import { getUserDetail } from '../services/api.services';
+
+const SignIn = ({ type = "default" ,signInSuccess}) => {
     const signInPageClassName = 'sign-in-' + type;
     const [signInPage, setSignInPage] = useState(true);
+    const [emailId, setEmailId] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+
+    const handleEmailChange = (event) =>{
+        setError('')
+        setEmailId(event.target.value)
+    }
+
+    const handlePasswordChange = (event) =>{
+        setError('')
+        setPassword(event.target.value)
+    }
+
+    const handleSignIn = async() => {
+        const userDetail = await getUserDetail();
+        if(emailId === userDetail.emailId && password === userDetail.password)
+            signInSuccess(true)
+        else{
+            if(emailId === '' || password === '')
+                setError('Please fill all the details.')
+            else 
+                setError('User Not Found!')
+        }
+            
+    }
 
     return (
         <div className={signInPageClassName}>
@@ -14,13 +42,14 @@ const SignIn = ({ type = "default" }) => {
                     <Form className={signInPageClassName + '-form'}>
                         <div className={signInPageClassName + '-header'}>Sign In</div>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Control className={signInPageClassName + '-input'} type="email" placeholder="Enter email" />
+                            <Form.Control className={signInPageClassName + '-input'} type="email" placeholder="Enter email" onChange={(e)=>handleEmailChange(e)}/>
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Control className={signInPageClassName + '-input'} type="password" placeholder="Password" />
+                            <Form.Control className={signInPageClassName + '-input'} type="password" placeholder="Password" onChange={(e)=>handlePasswordChange(e)}/>
                         </Form.Group>
-                        <AppButton label='LOGIN' />
+                        {error!=='' && <div className={signInPageClassName + '-error'}>{error}</div>}
+                        <AppButton label='LOGIN' onClick={()=>handleSignIn()}/>
                     </Form>
                 }
                 {!signInPage &&

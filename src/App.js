@@ -1,11 +1,13 @@
+import { useState } from 'react';
 import Dashboard from './views/Dashboard';
 import SignIn from './views/SignIn';
 
-const isLoggedIn = true;
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
   return (
     <>
-    {isLoggedIn?<Dashboard/>:<SignIn/>}
+      {isLoggedIn ? <Dashboard /> : <SignIn signInSuccess={(e)=>setIsLoggedIn(e)}/>}
     </>
   );
 }

@@ -1,4 +1,4 @@
-export const userDetail = { userId: 101, userName: 'binusuresh', firstName:'Binu', lastName:'Suresh', emailId: 'binu.suresh@gmail.com' }
+export const userDetail = { userId: 101, userName: 'binusuresh', firstName:'Binu', lastName:'Suresh', emailId: 'binu.suresh@gmail.com', password: 'binu123' }
 
 export const allCourseData = [{ id: 1, courseTitle: 'OET' },
 { id: 2, courseTitle: 'CBT' },
