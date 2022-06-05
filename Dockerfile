@@ -13,4 +13,4 @@ RUN npm install --no-package-lock
 RUN npm install react-scripts@3.4.1 -g 
 
 COPY . ./
-EXPOSE 3000
+EXPOSE 80
