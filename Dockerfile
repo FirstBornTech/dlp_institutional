@@ -13,5 +13,12 @@ RUN npm install --no-package-lock
 RUN npm install react-scripts@3.4.1 -g 
 
 COPY . ./
+# EXPOSE 3000
+# CMD ["npm", "start"]
+
+# lets build the application
+RUN npm run build
+
+FROM nginx
 EXPOSE 80
-CMD ["npm", "start"]
+COPY --from=builder /app/build /usr/share/nginx/html
